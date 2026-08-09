@@ -1,0 +1,45 @@
+# These defaults are embedded into the riff binary. A workspace-level
+# .riff.toml adds more ignore rules without replacing these defaults.
+
+[ignore]
+extensions = ["log", "md", "lock"]
+files = [
+  "package-lock.json",
+  "npm-shrinkwrap.json",
+  "pnpm-lock.yaml",
+  "bun.lockb",
+  "Cargo.lock",
+  "go.sum",
+  "composer.lock",
+  "poetry.lock",
+  "Pipfile.lock",
+  "uv.lock",
+  "mix.lock",
+]
+directories = [
+  ".git",
+  ".venv",
+  "target",
+  "node_modules",
+  "dist",
+  "build",
+  "out",
+  "coverage",
+  ".next",
+  ".nuxt",
+  ".svelte-kit",
+  ".turbo",
+  ".cache",
+  ".parcel-cache",
+  ".vite",
+  ".yarn/cache",
+  "storybook-static",
+  ".bundle",
+  "log",
+  "tmp",
+  "storage",
+  "vendor/bundle",
+  "vendor/cache",
+  "public/assets",
+  "public/packs",
+]

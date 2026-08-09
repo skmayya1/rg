@@ -1,0 +1,28 @@
+[package]
+name = "riff"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+description = "An interactive terminal UI for ripgrep"
+license = "MIT"
+
+[dependencies]
+anyhow = "1.0"
+crossterm = "0.29.0"
+kamon = "0.1.1"
+ratatui = { version = "0.30.2", default-features = false, features = ["crossterm"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+syntect = { version = "5.3", default-features = false, features = ["default-fancy"] }
+toml = "0.8"
+
+[[bin]]
+name = "riff"
+path = "src/main.rs"
+
+[lints.clippy]
+correctness = { level = "deny", priority = -1 }
+suspicious = { level = "warn", priority = -1 }
+style = { level = "warn", priority = -1 }
+complexity = { level = "warn", priority = -1 }
+perf = { level = "warn", priority = -1 }

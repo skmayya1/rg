@@ -33,4 +33,13 @@ riff /path/to/workspace
 
 ## Ignores
 
-Skips generated Rails, JavaScript, TypeScript, and React files, plus Markdown, logs, and lockfiles by default; add project-specific rules in `.riff.toml`.
+Default rules: [`config/default.toml`](config/default.toml).
+
+Workspace override: `.riff.toml`
+
+```toml
+[ignore]
+extensions = ["csv"]
+directories = ["docs"]
+files = ["*.min.js"]
+```
